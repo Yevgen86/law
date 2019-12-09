@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Client;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -69,7 +70,21 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        //add default role for the new user
         $user->addRole("client");
+
+
+        $user->client()->create([
+            /*'user_id' => $data['id'],*/
+            'firstname' => $data['name'],
+            'lastname' => $data['name'],
+            'email' => $data['email'],
+            'city' => 'wien',
+            'plz' => '1000',
+            'address' => 'example',
+        ]);
+
         return $user;
 
     }

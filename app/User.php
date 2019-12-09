@@ -41,7 +41,7 @@ class User extends Authenticatable
     }
 
     public function client() {
-        return $this->belongsTo('App\Client');
+        return $this->hasOne('App\Client');
     }
 
     public function addRole(string $roleName)
