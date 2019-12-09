@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Permission;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,5 +27,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+
+        foreach (Permission::all() as $permission) {
+            $permissionName = $permission->name;
+
+            Gate::define($permissionName, function($user) use ($permissionName) {
+                return $user->hasPermission($permissionName);
+            });
+        }
     }
 }

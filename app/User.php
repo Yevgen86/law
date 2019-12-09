@@ -48,8 +48,8 @@ class User extends Authenticatable
     public function hasPermission(string $permissionName):bool
     {
         $hasPermission = false;
-        foreach ($this->roles() as $role){
-            if($role->hasPermission($hasPermission)){
+        foreach ($this->roles as $role){
+            if($role->hasPermission($permissionName)){
                 $hasPermission = true;
                 break;
             }
