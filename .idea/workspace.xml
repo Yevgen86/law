@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63f09d47-30c9-4b47-b52e-5472d4b31db3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +16,7 @@
       <executable />
     </execution>
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
@@ -55,6 +57,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> 70d1af82a38b6e0536efd7781053e743c7ed662f
   <component name="FindInProjectRecents">
     <findStrings>
       <find>patient</find>
@@ -62,18 +66,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/database/seeds/PermissionsTableSeeder.php" />
-        <option value="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" />
-        <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
-      </list>
-    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -175,6 +167,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -252,6 +245,8 @@
       </pane>
     </panes>
   </component>
+=======
+>>>>>>> 70d1af82a38b6e0536efd7781053e743c7ed662f
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -259,9 +254,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Laravel/2019-11-all-in-one-therapy-2019-25-11/dev1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -271,18 +267,6 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -314,6 +298,7 @@
       <updated>1575622530710</updated>
       <workItem from="1575622531852" duration="374000" />
       <workItem from="1575624092081" duration="1891000" />
+      <workItem from="1575641439689" duration="288000" />
     </task>
     <task id="LOCAL-00001" summary="Model Role &amp; Permission created with Relationships and Migrations">
       <created>1575637981430</created>
@@ -332,6 +317,7 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="6505000" />
   </component>
@@ -384,6 +370,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
     </layout-to-restore>
   </component>
+=======
+>>>>>>> 70d1af82a38b6e0536efd7781053e743c7ed662f
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -399,21 +387,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="946" y="0" width="974" height="1080" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1575625936142" />
-    <state width="1672" height="258" key="GridCell.Tab.0.bottom" timestamp="1575624130741">
+    <state width="1672" height="258" key="GridCell.Tab.0.bottom" timestamp="1575641611329">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1672" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575624130741" />
-    <state width="1672" height="258" key="GridCell.Tab.0.center" timestamp="1575624130740">
+    <state width="1672" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1575641611329" />
+    <state width="1672" height="258" key="GridCell.Tab.0.center" timestamp="1575641611329">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1672" height="258" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575624130740" />
-    <state width="1672" height="258" key="GridCell.Tab.0.left" timestamp="1575624130740">
+    <state width="1672" height="258" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1575641611329" />
+    <state width="1672" height="258" key="GridCell.Tab.0.left" timestamp="1575641611329">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1672" height="258" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575624130740" />
-    <state width="1672" height="258" key="GridCell.Tab.0.right" timestamp="1575624130741">
+    <state width="1672" height="258" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1575641611329" />
+    <state width="1672" height="258" key="GridCell.Tab.0.right" timestamp="1575641611329">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+<<<<<<< HEAD
     <state width="1672" height="258" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575624130741" />
   </component>
   <component name="editorHistoryManager">
@@ -504,5 +493,8 @@
         </state>
       </provider>
     </entry>
+=======
+    <state width="1672" height="258" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1575641611329" />
+>>>>>>> 70d1af82a38b6e0536efd7781053e743c7ed662f
   </component>
 </project>
