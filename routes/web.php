@@ -38,6 +38,4 @@ Route::group(["middleware" => ['auth']], function () {
 
     Route::get('requests', 'RequestController@index')->name('requests');
 
-    Route::get('documents', 'DocumentController@index')->name('documents');
-
 });

@@ -87,15 +87,6 @@
                                 </a>
                             </li>
                         @endcan
-                        @can('clients-documents')
-                            <li class="nav-item">
-
-                                <a class="nav-link" href="{{ route('documents') }}">
-                                    {{ __('Dokumente') }}
-                                </a>
-
-                            </li>
-                        @endcan
                         <li class="nav-item dropdown">
 
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
