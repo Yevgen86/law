@@ -61,4 +61,8 @@ class User extends Authenticatable
         }
         return $hasPermission;
     }
+
+    public function appointments() {
+        return $this->hasMany('App\Appointment');
+    }
 }

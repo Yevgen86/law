@@ -76,7 +76,6 @@ class RegisterController extends Controller
 
 
         $user->client()->create([
-            /*'user_id' => $data['id'],*/
             'firstname' => $data['name'],
             'lastname' => $data['name'],
             'email' => $data['email'],
