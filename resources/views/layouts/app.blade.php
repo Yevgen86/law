@@ -66,6 +66,16 @@
                                     </form>
                                 </div>
                             </li>
+                        @can('show-clients')
+                            <li>
+                                klient
+                            </li>
+                        @endcan
+                        @can('reserve-appointment')
+                            <li>
+                                reserve-appointment
+                            </li>
+                        @endcan
                         @endguest
                     </ul>
                 </div>
