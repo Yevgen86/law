@@ -17,4 +17,8 @@ class Client extends Model
     public function appointments() {
         return $this->hasMany('App\Appointment');
     }
+
+    public function documentations() {
+        return $this->hasMany('App\Documentation')->orderBy('id', 'desc')  ;
+    }
 }
