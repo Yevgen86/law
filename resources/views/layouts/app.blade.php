@@ -22,6 +22,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -33,6 +34,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+
+                        <a class="nav-link" href="{{ route('ueberUns') }}">{{ __('über uns') }}</a>
+                        <a class="nav-link" href="{{ route('leistungen') }}">{{ __('leistungen') }}</a>
+                        <a class="nav-link" href="{{ route('kontakt') }}">{{ __('kontakt') }}</a>
+                        <a class="nav-link" href="{{ route('impressum') }}">{{ __('impressum') }}</a>
 
                     </ul>
 

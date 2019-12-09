@@ -18,4 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::view('/impressum', 'frontend.impressum');
+Route::view('/ueberUns', 'frontend.ueberuns')->name('ueberUns');
+Route::view('/leistungen', 'frontend.leistungen')->name('leistungen');
+Route::view('/kontakt', 'frontend.kontakt')->name('kontakt');
+Route::view('/impressum', 'frontend.impressum')->name('impressum');
