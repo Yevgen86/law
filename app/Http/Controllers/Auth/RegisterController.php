@@ -77,11 +77,13 @@ class RegisterController extends Controller
 
         $user->client()->create([
             'firstname' => $data['name'],
-            'lastname' => $data['name'],
+            'lastname' => $data['lastname'],
             'email' => $data['email'],
-            'city' => 'wien',
-            'plz' => '1000',
-            'address' => 'example',
+            'tel' => $data['tel'],
+            'address' => $data['address'],
+            'plz' => $data['plz'],
+            'city' => $data['city'],
+            'country' => $data['country'],
         ]);
 
         return $user;

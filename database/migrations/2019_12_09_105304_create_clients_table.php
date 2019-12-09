@@ -20,10 +20,11 @@ class CreateClientsTable extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email');
-            $table->string('country')->default('Österreich');
-            $table->string('city');
-            $table->string('plz');
+            $table->string('tel');
             $table->text('address');
+            $table->string('plz');
+            $table->string('city');
+            $table->string('country')->default('Österreich');
             $table->timestamps();
         });
     }
