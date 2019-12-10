@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 
 class ClientController extends Controller
 {
@@ -14,7 +16,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return view('backend/clients');
+        $clients = Client::orderBy('id', 'desc')->paginate(getenv('AIOT_PAGINATE_ROWS'));
+        return view('backend/clients',compact('clients'));
     }
 
     /**

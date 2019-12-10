@@ -39,7 +39,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         ]], function () {
 
-        Route::get('lawyer', 'LawyerController@index')->name('lawyer');
+        /*Route::get('lawyer', 'LawyerController@index')->name('lawyer');*/
 
         Route::get('clients', 'ClientController@index')->name('clients');
 
