@@ -24,18 +24,19 @@ Route::view('/kontakt', 'frontend.kontakt')->name('kontakt');
 Route::view('/impressum', 'frontend.impressum')->name('impressum');
 
 // Lawyer == Admin Navigation routes
+Route::group(['middleware' => 'auth'], function () {
 
 
+    Route::group(["middleware" => ['hasPermission:show-clients']], function () {
 
+        Route::get('lawyer', 'LawyerController@index')->name('lawyer');
 
-Route::group(["middleware" => ['auth']], function () {
+        Route::get('clients', 'ClientController@index')->name('clients');
 
-    Route::get('lawyer', 'LawyerController@index')->name('lawyer');
+        Route::get('appointments', 'AppointmentController@index')->name('appointments');
 
-    Route::get('clients', 'ClientController@index')->name('clients');
+        Route::get('requests', 'RequestController@index')->name('requests');
 
-    Route::get('appointments', 'AppointmentController@index')->name('appointments');
-
-    Route::get('requests', 'RequestController@index')->name('requests');
+    });
 
 });
