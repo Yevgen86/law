@@ -29,7 +29,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::group(["middleware" => ['hasPermission:show-clients']], function () {
 
-        Route::get('lawyer', 'LawyerController@index')->name('lawyer');
+        /*Route::get('lawyer', 'LawyerController@index')->name('lawyer');*/
 
         Route::get('clients', 'ClientController@index')->name('clients');
 
