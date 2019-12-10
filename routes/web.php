@@ -23,11 +23,21 @@ Route::view('/leistungen', 'frontend.leistungen')->name('leistungen');
 Route::view('/kontakt', 'frontend.kontakt')->name('kontakt');
 Route::view('/impressum', 'frontend.impressum')->name('impressum');
 
-// Lawyer == Admin Navigation routes
+
 Route::group(['middleware' => 'auth'], function () {
 
+// Lawyer == Admin Navigation routes group
+    Route::group(["middleware" => [
 
-    Route::group(["middleware" => ['hasPermission:show-clients']], function () {
+        'hasPermission:show-clients',
+        'hasPermission:enter-appointments',
+        'hasPermission:list-appointments',
+        'hasPermission:confirm-appointments',
+        'hasPermission:manage-request',
+        'hasPermission:client-update-delete',
+        'hasPermission:clients-documents',
+
+        ]], function () {
 
         Route::get('lawyer', 'LawyerController@index')->name('lawyer');
 
@@ -39,4 +49,17 @@ Route::group(['middleware' => 'auth'], function () {
 
     });
 
+
+// Client own page Navigation routes group
+    Route::group(["middleware" => [
+
+        'hasPermission:reserve-appointment',
+        'hasPermission:cancel-appointment',
+        'hasPermission:show-my-appointment',
+
+    ]], function () {
+
+    Route::get('single', 'ClientController@profile')->name('single');
+
+    });
 });
