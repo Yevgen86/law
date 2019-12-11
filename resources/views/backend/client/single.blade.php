@@ -8,7 +8,7 @@
                 <div class="col-md-12">
                     <div>
                         <div>
-                            <h1>Willkomen in Ihr persönliches Kabinett </h1>
+                            <h1>Willkomen {{ auth()->user()->name }} </h1>
                         </div>
 
                         Your user id is: {{ $client->id }}
