@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class ClientController extends Controller
@@ -84,5 +85,15 @@ class ClientController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    //
+    // for single Auth Client
+    //
+    public function profile()
+    {
+        $client = Auth::user();
+
+        return view('backend.client.single', compact('client'));
     }
 }

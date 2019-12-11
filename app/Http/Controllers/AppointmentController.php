@@ -41,7 +41,7 @@ class AppointmentController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show($id)
     {
@@ -81,4 +81,11 @@ class AppointmentController extends Controller
     {
         //
     }
+
+    // Single Client functions below
+
+    /*public function showClientAppointment()
+    {
+        return view('backend/client/single');
+    }*/
 }

@@ -33,7 +33,7 @@
 
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+                <img width="50" src="{{ URL::to('/images/logo.png') }}">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -95,6 +95,28 @@
                                 </a>
                             </li>
                         @endcan
+
+                            @can('show-my-appointment')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('single') }}">
+                                        {{ __('Termine') }}
+                                    </a>
+                                </li>
+                            @endcan
+{{--                            @can('show-clients')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('clients') }}">
+                                        {{ __('Klienten') }}
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('show-clients')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('clients') }}">
+                                        {{ __('Klienten') }}
+                                    </a>
+                                </li>
+                            @endcan--}}
                         <li class="nav-item dropdown">
 
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
