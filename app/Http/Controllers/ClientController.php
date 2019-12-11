@@ -29,7 +29,7 @@ class ClientController extends Controller
      */
     public function show(Client $client,$id)
     {
-        return view('backend/client',compact('id'));
+        return view('backend.client',compact('id'));
     }
 
     /**
