@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container">
-        <div class="m-3">
+        <div class="row">
             <a href="#">Add New Client</a>
         </div>
         <input type="text" name="search" value="" id="search" placeholder="Search" autofocus />

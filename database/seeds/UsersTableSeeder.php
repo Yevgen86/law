@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
                 'roles' => ['client'],
                 /*'client' => '1234010183',*/
             ],
-    ];
+        ];
 
         foreach ($users as $userName => $userData) {
             $user = new User();

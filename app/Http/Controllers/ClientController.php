@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Client;
+use App\Documentation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,7 +30,10 @@ class ClientController extends Controller
      */
     public function show(Client $client,$id)
     {
-        return view('backend.client',compact('id'));
+        $client = Client::findOrFail($id);
+        $documents = $client->documentations()->orderBy('id', 'desc')->paginate(getenv('AIOT_PAGINATE_ROWS'));
+        /*dd($documents);*/
+        return view('backend.client',compact('id','documents'));
     }
 
     /**

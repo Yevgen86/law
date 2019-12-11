@@ -6,6 +6,7 @@ use App\Client;
 use App\Documentation;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DocumentationController extends Controller
 {
@@ -44,14 +45,16 @@ class DocumentationController extends Controller
 
         $client = Client::findOrFail($id);
         $user = User::findOrFail($client->user_id);
-        $doc_path = $request->file('doc')->store("upload_doc/$client->firstname.$client->lastname");
+        $uploded_file = $request->file('doc');
         $name = $request->title;
+
+        $doc_path = Storage::disk('upload_doc')->put($client->firstname.$client->lastname,$uploded_file);
 
         $documentation = new Documentation();
         $documentation->user()->associate($user);
         $documentation->client()->associate($client);
         $documentation->name = $name;
-        $documentation->link = $doc_path;
+        $documentation->link = "/upload_doc/".$doc_path;
         $documentation->save();
 
         return redirect()->back();
