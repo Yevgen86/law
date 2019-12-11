@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Documentation extends Model
 {
+    protected $fillable = [
+        'name', 'link',
+    ];
     public function user() {
         return $this->belongsTo('App\User', 'user_id');
     }

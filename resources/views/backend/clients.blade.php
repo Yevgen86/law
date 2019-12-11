@@ -25,7 +25,7 @@
                 @foreach($clients as $client)
                     <tbody>
                         <tr>
-                            <td><a href="#">{{ $client->firstname }}</a></td>
+                            <td><a href="/clients/{{$client->id}}">{{ $client->firstname }}</a></td>
                             <td>{{ $client->lastname }}</td>
                             <td>{{ $client->email }}</td>
                             <td>{{ $client->tel }}</td>

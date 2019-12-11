@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Client;
+use App\Documentation;
+use App\User;
 use Illuminate\Http\Request;
 
-
-class ClientController extends Controller
+class DocumentationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,20 +16,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $clients = Client::orderBy('id', 'desc')->paginate(getenv('AIOT_PAGINATE_ROWS'));
-        /*dd($clients);*/
-        return view('backend/clients',compact('clients'));
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Client $client,$id)
-    {
-        return view('backend/client',compact('id'));
+        //
     }
 
     /**
@@ -47,7 +35,35 @@ class ClientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
+    {
+        request()->validate([
+            'title' => 'required',
+            'doc' => 'required|mimes:pdf',
+        ]);
+
+        $client = Client::findOrFail($id);
+        $user = User::findOrFail($client->user_id);
+        $doc_path = $request->file('doc')->store("upload_doc/$client->firstname.$client->lastname");
+        $name = $request->title;
+
+        $documentation = new Documentation();
+        $documentation->user()->associate($user);
+        $documentation->client()->associate($client);
+        $documentation->name = $name;
+        $documentation->link = $doc_path;
+        $documentation->save();
+
+        return redirect()->back();
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
         //
     }
