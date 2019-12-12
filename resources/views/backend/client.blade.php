@@ -9,50 +9,52 @@
         <div class="top-left">
             <a href="/clients">Zurück</a>
         </div>
+        <div class="m-1">
+            <form action="/clients/{{$id}}" enctype="multipart/form-data" method="post">
+                @csrf
 
-        <form action="/clients/{{$id}}" enctype="multipart/form-data" method="post">
-            @csrf
-
-            <div class="row"><h1>Dokumente</h1></div>
-            <div class="row">
-                <lable for="doc" class="col-md-4 col-form-label">Ein Dokument Hochladen</lable>
-                <input type="file" class="form-control-file" id="doc" name="doc">
-                @error('doc')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-            </div>
-
-            <div class="row">
-                <lable for="title" class="col-md-4 col-form-label">Ein Dokument Hochladen</lable>
-                <input type="text" class="form-control-file" id="title" name="title">
-                @error('title')
-                <span class="invalid-feedback" role="alert">
+                <div class="row">
+                    <h3>Dokument hochladen</h3>
+                </div>
+                <div class="row mb-1">
+                    <lable for="doc" class="">Dokument hochladen</lable>
+                    <input type="file" class="form-control-file" id="doc" name="doc">
+                    @error('doc')
+                    <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                @enderror
-            </div>
+                    @enderror
+                </div>
 
-            <div class="row">
-                <button class="btn btn-primary" type="submit">Hochladen</button>
-            </div>
-        </form>
-        <br>
-        <div class="row">
+                <div class="row mb-2">
+                    <lable for="title" class="">Dokument Name</lable>
+                    <input type="text" class="form-control" id="title" name="title">
+                    @error('title')
+                    <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+
+                <div class="row mb-1">
+                    <button class="btn btn-primary" type="submit">Hochladen</button>
+                </div>
+            </form>
+        </div>
+        @if($documents->count())
+        <div class="row mt-5">
             <h3>Dokument Liste</h3>
         </div>
-        <div class="row">
+        <div class="mb-2">
             <input type="text" name="search" value="" id="search" placeholder="Search" autofocus/>
         </div>
         <table class="table table-bordered sortable" id="table_example">
             <thead>
-            <tr>
+                <tr>
                 <th>Dokument Name</th>
-                <th>DoKument Löschen</th>
+                <th>Dokument Löschen</th>
             </tr>
             </thead>
-            @if($documents->count())
                 @foreach($documents as $document)
                     <tbody>
                     <tr>
@@ -65,11 +67,11 @@
                     </tr>
                     </tbody>
                 @endforeach
+                    <p>{{$documents->links()}}</p>
             @endif
         </table>
 
         {{--<p>{!! $clients->appends(\Request::except('page'))->render() !!}</p>--}}
-        <p>{{$documents->links()}}</p>
     </div>
     </div>
 

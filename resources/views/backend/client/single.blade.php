@@ -39,7 +39,7 @@
                                 <h5 class="card-title">Eigene Daten & Dokumente</h5>
                                 <p class="card-text" style="height: 40px;">Persönlichen Informationen, Dokumente,
                                     Bescheide, Ladungen uvm.</p>
-                                <a href="#" class="btn btn-primary" style="display: block; text-transform: uppercase;">weiter</a>
+                                <a href="/single/{{ auth()->user()->id }}/doc" class="btn btn-primary" style="display: block; text-transform: uppercase;">weiter</a>
                             </div>
                         </div>
                     </div>

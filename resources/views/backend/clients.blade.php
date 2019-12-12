@@ -6,7 +6,8 @@
         <div class="row">
             <a href="#">Add New Client</a>
         </div>
-        <input type="text" name="search" value="" id="search" placeholder="Search" autofocus />
+        @if($clients->count())
+        <input class="mb-2" type="text" name="search" value="" id="search" placeholder="Search" autofocus />
 
         <table class="table table-bordered sortable" id="table_example">
             <thead>
@@ -19,9 +20,9 @@
                     <th>Plz</th>
                     <th>Ort</th>
                     <th>Land</th>
+                    <th>Klient Löschen</th>
                 </tr>
             </thead>
-            @if($clients->count())
                 @foreach($clients as $client)
                     <tbody>
                         <tr>
@@ -33,7 +34,7 @@
                             <td>{{ $client->plz }}</td>
                             <td>{{ $client->city }}</td>
                             <td>{{ $client->country }}</td>
-                            {{--<td><a href="/client/{{$client->id}}">View Details</a></td>--}}
+                            <td><a href="/client/{{$client->id}}/delete">Löschen</a></td>
                         </tr>
                     </tbody>
                 @endforeach

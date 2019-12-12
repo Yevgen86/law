@@ -42,6 +42,7 @@ Route::group(['middleware' => 'auth'], function () {
         /*Route::get('lawyer', 'LawyerController@index')->name('lawyer');*/
 
         Route::get('clients', 'ClientController@index')->name('clients');
+        Route::get('/client/{id}/delete', 'ClientController@destroy');
         Route::get('clients/{id}', 'ClientController@show')->name('client');
         Route::post('clients/{id}', 'DocumentationController@store');
         Route::get('clients/doc/{id}', 'DocumentationController@destroy')->name('delete_doc');
@@ -61,6 +62,7 @@ Route::group(['middleware' => 'auth'], function () {
     ]], function () {
 
     Route::get('single', 'ClientController@profile')->name('profile');
+    Route::get('single/{id}/doc', 'DocumentationController@show');
 
     });
 });

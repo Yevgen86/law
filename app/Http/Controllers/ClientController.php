@@ -17,7 +17,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $clients = Client::orderBy('id', 'desc')->paginate(getenv('AIOT_PAGINATE_ROWS'));
+        $clients = Client::orderBy('id', 'desc')->paginate(10);
         /*dd($clients);*/
         return view('backend/clients',compact('clients'));
     }
@@ -88,7 +88,10 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //delete the Row from the Documents table
+        $user = Client::findOrFail($id)->user();
+        $user->delete();
+        return redirect()->back();
     }
 
     //
