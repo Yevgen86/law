@@ -33,7 +33,7 @@ class ClientController extends Controller
         $client = Client::findOrFail($id);
         $documents = $client->documentations()->orderBy('id', 'desc')->paginate(getenv('AIOT_PAGINATE_ROWS'));
         /*dd($documents);*/
-        return view('backend.client',compact('id','documents'));
+        return view('backend.client',compact('id','documents','client'));
     }
 
     /**

@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="float-right">
-            <h3> "Client" Profile</h3>
+            <h3> {{$client->firstname ." ".$client->lastname}} Profile</h3>
         </div>
         <div class="top-left">
             <a href="/clients">Zurück</a>
