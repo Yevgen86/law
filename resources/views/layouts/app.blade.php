@@ -103,7 +103,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
                                 @can('show-my-appointment', 'cancel-appointment')
-                                    <a class="dropdown-item" href="{{ route('single') }}">
+                                    <a class="dropdown-item" href="{{ route('profile') }}">
                                         {{ __('Meine Termine') }}
                                     </a>
                                 @endcan
