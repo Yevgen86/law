@@ -7,6 +7,8 @@ use App\Documentation;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Validation\Validator;
 
 class DocumentationController extends Controller
 {
@@ -33,12 +35,12 @@ class DocumentationController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,$id)
+    public function store(Request $request, $id)
     {
-        request()->validate([
+        $request->validate([
             'title' => 'required',
             'doc' => 'required|mimes:pdf',
         ]);
@@ -48,13 +50,13 @@ class DocumentationController extends Controller
         $uploded_file = $request->file('doc');
         $name = $request->title;
 
-        $doc_path = Storage::disk('upload_doc')->put($client->firstname.$client->lastname,$uploded_file);
+        $doc_path = Storage::disk('upload_doc')->put($client->firstname . $client->lastname, $uploded_file);
 
         $documentation = new Documentation();
         $documentation->user()->associate($user);
         $documentation->client()->associate($client);
         $documentation->name = $name;
-        $documentation->link = "/upload_doc/".$doc_path;
+        $documentation->link = "/upload_doc/" . $doc_path;
         $documentation->save();
 
         return redirect()->back();
@@ -63,7 +65,7 @@ class DocumentationController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -74,7 +76,7 @@ class DocumentationController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -85,8 +87,8 @@ class DocumentationController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -97,11 +99,23 @@ class DocumentationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        //delete the Row from the Documents table
+        $doc = Documentation::findOrFail($id);
+        $doc->delete();
+
+        //delete the file from the folder
+        $doc_path = $doc->link;
+        $path_pieces = explode("/",$doc_path);
+        $doc_path = "/$path_pieces[2]/$path_pieces[3]";
+        /*dd($doc_path);*/
+        Storage::disk('upload_doc')->delete($doc_path);
+        $message = "Patient {$doc->name} wurde gelöscht.";
+        session()->flash("message", $message);
+        return redirect()->back();
     }
 }
