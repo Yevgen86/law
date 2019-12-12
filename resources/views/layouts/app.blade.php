@@ -13,10 +13,10 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="{{ asset('js/jquery.quicksearch.js') }}"></script>
-    {{--<script src="{{ asset('js/jquery.tablesorter.min.js') }}"></script>--}}
+{{--<script src="{{ asset('js/jquery.tablesorter.min.js') }}"></script>--}}
 
 
-    <!-- Fonts -->
+<!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
@@ -24,14 +24,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 
-
-
 </head>
 <body>
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
 
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img width="50" src="{{ URL::to('/images/logo.png') }}">
             </a>
@@ -95,28 +93,6 @@
                                 </a>
                             </li>
                         @endcan
-
-                            @can('show-my-appointment')
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('single') }}">
-                                        {{ __('Termine') }}
-                                    </a>
-                                </li>
-                            @endcan
-{{--                            @can('show-clients')
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('clients') }}">
-                                        {{ __('Klienten') }}
-                                    </a>
-                                </li>
-                            @endcan
-                            @can('show-clients')
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('clients') }}">
-                                        {{ __('Klienten') }}
-                                    </a>
-                                </li>
-                            @endcan--}}
                         <li class="nav-item dropdown">
 
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -126,6 +102,21 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
+                                @can('show-my-appointment', 'cancel-appointment')
+                                    <a class="dropdown-item" href="{{ route('single') }}">
+                                        {{ __('Meine Termine') }}
+                                    </a>
+                                @endcan
+                                @can('reserve-appointment')
+                                    <a class="dropdown-item" href="#">
+                                        {{ __('Termin Reservieren') }}
+                                    </a>
+                                @endcan
+                                @can('show-my-appointment')
+                                    <a class="dropdown-item" href="{{ route('profile') }}">
+                                        {{ __('Mein Account') }}
+                                    </a>
+                                @endcan
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -136,7 +127,6 @@
                                       style="display: none;">
                                     @csrf
                                 </form>
-
                             </div>
                         </li>
                     @endguest
@@ -152,7 +142,7 @@
 </div>
 
 <script>
-    jQuery(document).ready(function($){
+    jQuery(document).ready(function ($) {
         $(function () {
             $('input#search').quicksearch('table tbody tr', {
                 matchedResultsCount: 0,
@@ -160,12 +150,7 @@
                 resetBind: 'reset'
             });
         });
-
-        //sort table
-        /*$('table').tablesort();*/
-
     });
-
 </script>
 </body>
 </html>

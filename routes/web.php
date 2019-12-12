@@ -60,7 +60,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     ]], function () {
 
-    Route::get('single', 'ClientController@profile')->name('single');
+    Route::get('single', 'ClientController@profile')->name('profile');
 
     });
 });
