@@ -4,19 +4,19 @@
 
     <div class="container">
         @if($documents->count())
-        <div class="row">
-            <h3>Dokument Liste</h3>
-        </div>
-        <div class="row">
-            <input type="text" name="search" value="" id="search" placeholder="Search" autofocus/>
-        </div>
-        <table class="table table-bordered sortable" id="table_example">
-            <thead>
+            <div class="row">
+                <h3>Dokumentliste</h3>
+            </div>
+            <div class="row">
+                <input type="text" name="search" value="" id="search" placeholder="Search" autofocus/>
+
+            <table class="table table-bordered sortable" id="table_example">
+                <thead>
                 <tr>
-                <th>Dokument Name</th>
-                <th>Dokument Löschen</th>
-            </tr>
-            </thead>
+                    <th>Dokumentname</th>
+                    <th>Dokument Löschen</th>
+                </tr>
+                </thead>
                 @foreach($documents as $document)
                     <tbody>
                     <tr>
@@ -29,16 +29,14 @@
                     </tr>
                     </tbody>
                 @endforeach
-            <p>{{$documents->links()}}</p>
+                <p>{{$documents->links()}}</p>
                 @else
-                <div class="row">
-                    <h3>Kein Dokumente vorhanden</h3>
-                </div>
-            @endif
-        </table>
-
-            {{--<p>{!! $clients->appends(\Request::except('page'))->render() !!}</p>--}}
-    </div>
+                    <div class="row">
+                        <h3>Keine Dokumente vorhanden</h3>
+                    </div>
+                @endif
+            </table>
+            </div>
     </div>
 
 @endsection
