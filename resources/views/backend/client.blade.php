@@ -9,6 +9,20 @@
         <div class="top-left">
             <a href="/clients">Zurück</a>
         </div>
+
+        <h2>Stammdaten</h2>
+        @if ($errors->any())
+            <div class="validation-errors">
+                <ul class="validation-error">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        <div class="mb-5">
+
+        </div>
         <div class="m-1">
             <form action="/clients/{{$id}}" enctype="multipart/form-data" method="post">
                 @csrf

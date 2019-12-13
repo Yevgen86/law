@@ -3,8 +3,8 @@
 @section('content')
 
     <div class="container">
-        <div class="row">
-            <a href="#">Add New Client</a>
+        <div class="mb-2">
+            <a href="{{ route('newClient') }}">Neuen Klienten Anlegen</a>
         </div>
         @if($clients->count())
         <input class="mb-2" type="text" name="search" value="" id="search" placeholder="Search" autofocus />
