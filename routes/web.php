@@ -66,6 +66,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('single', 'ClientController@profile')->name('profile');
     Route::get('single/{id}/doc', 'DocumentationController@show');
+    Route::get('single/{id}/profile', 'ClientController@showprofile');
+    Route::put('single/{id}/profile', 'ClientController@update');
+
 
     });
 });
