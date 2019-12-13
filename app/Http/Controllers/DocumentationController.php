@@ -70,9 +70,12 @@ class DocumentationController extends Controller
      */
     public function show($id)
     {
-        $documents = Documentation::where('user_id', $id)->orderBy('name', 'desc')->paginate(5);
-        /*dd($documents);*/
-        return view('backend.client.documents',compact('documents'));
+        $user_id = auth()->user()->id;
+        if ($user_id == $id) {
+            $documents = Documentation::where('user_id', $id)->orderBy('name', 'desc')->paginate(5);
+            /*dd($documents);*/
+            return view('backend.client.documents', compact('documents'));
+        }
     }
 
     /**

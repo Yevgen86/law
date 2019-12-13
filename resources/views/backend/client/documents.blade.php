@@ -3,6 +3,9 @@
 @section('content')
 
     <div class="container">
+        <div class="top-left mb-2">
+            <a href="/single">Zurück</a>
+        </div>
         @if($documents->count())
             <div class="row">
                 <h3>Dokumentliste</h3>
