@@ -85,7 +85,6 @@ class RegisterController extends Controller
             'city' => $data['city'],
             'country' => $data['country'],
         ]);
-
         return $user;
 
     }

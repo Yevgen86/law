@@ -42,6 +42,8 @@ Route::group(['middleware' => 'auth'], function () {
         /*Route::get('lawyer', 'LawyerController@index')->name('lawyer');*/
 
         Route::get('clients', 'ClientController@index')->name('clients');
+        Route::get('clients/newClient', 'ClientController@showNewClient')->name('newClient');
+        Route::post('clients/addClient', 'ClientController@addClient')->name('addClient');
         Route::get('/client/{id}/delete', 'ClientController@destroy');
         Route::get('clients/{id}', 'ClientController@show')->name('client');
         Route::post('clients/{id}', 'DocumentationController@store');

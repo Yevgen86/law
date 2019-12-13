@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Client;
 use App\Documentation;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 
 class ClientController extends Controller
@@ -102,5 +104,47 @@ class ClientController extends Controller
         $client = Auth::user();
 
         return view('backend.client.single', compact('client'));
+    }
+    public function showNewClient(){
+        return view('backend.newClient');
+    }
+
+    public function addClient(Request $request){
+        $data = request()->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'password_confirmation' => 'required',
+            'tel' => 'required',
+            'address' => 'required',
+            'plz' => 'required',
+            'city' => 'required',
+            'country' => 'required',
+        ]);
+        /*dd($data);*/
+        $user = new User();
+        $user->name = $request->firstname;
+        $user->email = $request->email;
+        $pass =  $request->password;
+        $hashed = Hash::make('pass', [
+            'rounds' => 12
+        ]);
+        $user->password = $hashed;
+        $user->save();
+
+        $client = new Client();
+        $client->user()->associate($user);
+        $client->firstname = $request->firstname;
+        $client->lastname = $request->lastname;
+        $client->email = $request->email;
+        $client->tel = $request->tel;
+        $client->address = $request->address;
+        $client->plz = $request->plz;
+        $client->city = $request->city;
+        $client->country = $request->country;
+        $client->save();
+
+        return redirect('/clients');
     }
 }
