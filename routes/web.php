@@ -46,6 +46,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('clients/addClient', 'ClientController@addClient')->name('addClient');
         Route::get('/client/{id}/delete', 'ClientController@destroy');
         Route::get('clients/{id}', 'ClientController@show')->name('client');
+        Route::put('clients/{id}', 'ClientController@update');
         Route::post('clients/{id}', 'DocumentationController@store');
         Route::get('clients/doc/{id}', 'DocumentationController@destroy')->name('delete_doc');
         Route::get('appointments', 'AppointmentController@index')->name('appointments');

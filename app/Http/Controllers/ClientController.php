@@ -67,7 +67,7 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -79,7 +79,27 @@ class ClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = request()->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'email' => 'required',
+            'tel' => 'required',
+            'address' => 'required',
+            'plz' => 'required',
+            'city' => 'required',
+            'country' => 'required',
+        ]);
+        $client = Client::findOrFail($id);
+        $client->firstname = $request->firstname;
+        $client->lastname = $request->lastname;
+        $client->email = $request->email;
+        $client->tel = $request->tel;
+        $client->address = $request->address;
+        $client->plz = $request->plz;
+        $client->city = $request->city;
+        $client->country = $request->country;
+        $client->save();
+        return redirect()->back();
     }
 
     /**
