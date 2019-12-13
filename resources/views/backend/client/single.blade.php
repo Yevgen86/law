@@ -49,7 +49,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Eigene Daten</h5>
                                 <p class="card-text" style="height: 40px;">Persönlichen Informationen</p>
-                                <a href="/single/{{ auth()->user()->id }}/doc" class="btn btn-primary" style="display: block; text-transform: uppercase;">weiter</a>
+                                <a href="/single/{{ auth()->user()->id }}/profile" class="btn btn-primary" style="display: block; text-transform: uppercase;">weiter</a>
                             </div>
                         </div>
                     </div>
