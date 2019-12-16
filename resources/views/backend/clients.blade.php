@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="container">
         <div class="mb-2">
             <a href="{{ route('newClient') }}">Neuen Klienten Anlegen</a>
