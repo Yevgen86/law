@@ -50,14 +50,14 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('clients/{id}', 'DocumentationController@store');
         Route::get('clients/doc/{id}', 'DocumentationController@destroy')->name('delete_doc');
         Route::get('appointments', 'AppointmentController@index')->name('appointments');
-        Route::get('requests', 'RequestController@index')->name('requests');
+        Route::get('contacts', 'RequestController@list')->name('contacts');
+       // Route::get('contacts', 'RequestController@destroy')->destroy('contacts');
 
     /*});*/
 
 
 // Client own page Navigation routes group
     Route::group(["middleware" => [
-
         'hasPermission:reserve-appointment',
         'hasPermission:cancel-appointment',
         'hasPermission:show-my-appointment',

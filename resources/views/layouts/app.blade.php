@@ -88,7 +88,7 @@
                         @endcan
                         @can('manage-request')
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('requests') }}">
+                                <a class="nav-link" href="{{ route('contacts') }}">
                                     {{ __('Anfragen') }}
                                 </a>
                             </li>

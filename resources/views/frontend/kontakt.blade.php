@@ -8,12 +8,16 @@
                     <div class="card-header">
                         Hier nehmen sie mit uns Kontakt für ein Erstgespräch auf
                     </div>
+                    <div id="app">
+                        <!--call vue.js -->
+                        <contacts></contacts>
+                    </div>
 
-                    <!--call vue.js -->
-                    <my-form></my-form>
+
 
                 </div>
             </div>
         </div>
     </div>
+
 @endsection

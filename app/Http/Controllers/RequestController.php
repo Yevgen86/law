@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Contact;
 
 class RequestController extends Controller
 {
@@ -13,6 +15,8 @@ class RequestController extends Controller
      */
     public function index()
     {
+
+
         return view('backend/requests');
     }
 
@@ -21,6 +25,13 @@ class RequestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function list()
+    {
+       $data = Contact::all();
+        return view("backend/requests", ['data'=>$data]);
+    }
+
     public function create()
     {
         //
@@ -79,6 +90,6 @@ class RequestController extends Controller
      */
     public function destroy($id)
     {
-        //
+echo ($id);
     }
 }
