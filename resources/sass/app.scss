@@ -1,8 +1,22 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
+@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+// start my styles
+
+* {
+    box-sizing: border-box;
+    font-family: 'Gelasio', serif!important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
