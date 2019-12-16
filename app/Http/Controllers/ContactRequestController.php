@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Contact;
+use App\ContactRequest;
+use App\Client;
 
-class RequestController extends Controller
+class ContactRequestController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -29,7 +31,7 @@ class RequestController extends Controller
     public function list()
     {
          //$data = Contact::all()->paginate(15);
-       $data = DB::table('contacts')->paginate(10);
+       $data = DB::table('contacts')->paginate(7);
         return view("backend/requests", ['data'=>$data]);
     }
 
@@ -44,7 +46,7 @@ class RequestController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ContactRequest $request)
     {
         //
     }
@@ -78,7 +80,7 @@ class RequestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ContactRequest $request, $id)
     {
         //
     }
@@ -91,6 +93,9 @@ class RequestController extends Controller
      */
     public function destroy($id)
     {
-echo ($id);
+        //delete the Row from the Documents table
+        $contact = ContactRequest::findOrFail($id);
+        $contact->delete();
+        return redirect()->back();
     }
 }

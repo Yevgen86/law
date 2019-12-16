@@ -13,6 +13,8 @@
                     <th>Thema</th>
                     <th>Rechtsschutz vorhanden</th>
                     <th>Anwalt vorhanden</th>
+                    <th>Anfrage löschen</th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -24,6 +26,8 @@
                         <td> {{$i->thema}} </td>
                         <td> {{$i->rechtsschutz}} </td>
                         <td> {{$i->rechtsvertretung}} </td>
+                        <td><a href="/contacts/{{$i->id}}/delete">Löschen</a></td>
+
                     </tr>
                 @endforeach
                 </tbody>
@@ -31,5 +35,6 @@
         </div>
         {{$data->links()}}
     </div>
+
 
 @endsection

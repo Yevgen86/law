@@ -1952,9 +1952,6 @@ __webpack_require__.r(__webpack_exports__);
     next: function next() {
       this.step++;
     },
-    submit: function submit() {
-      alert('Submit to blah and show blah and etc.');
-    },
     checkForm: function checkForm(e) {
       this.errors = [];
 

@@ -50,8 +50,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('clients/{id}', 'DocumentationController@store');
         Route::get('clients/doc/{id}', 'DocumentationController@destroy')->name('delete_doc');
         Route::get('appointments', 'AppointmentController@index')->name('appointments');
-        Route::get('contacts', 'RequestController@list')->name('contacts');
-       // Route::get('contacts', 'RequestController@destroy')->destroy('contacts');
+        Route::get('contacts', 'ContactRequestController@list')->name('contacts');
+        Route::get('contacts/{id}/delete', 'ContactRequestController@destroy');
 
     /*});*/
 
