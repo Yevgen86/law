@@ -28,7 +28,8 @@ class RequestController extends Controller
 
     public function list()
     {
-       $data = Contact::all();
+         //$data = Contact::all()->paginate(15);
+       $data = DB::table('contacts')->paginate(10);
         return view("backend/requests", ['data'=>$data]);
     }
 
