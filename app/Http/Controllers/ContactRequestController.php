@@ -30,8 +30,7 @@ class ContactRequestController extends Controller
 
     public function list()
     {
-         //$data = Contact::all()->paginate(15);
-       $data = DB::table('contacts')->paginate(7);
+       $data = DB::table('contacts')->orderBy('id', 'desc')->paginate(7);
         return view("backend/requests", ['data'=>$data]);
     }
 

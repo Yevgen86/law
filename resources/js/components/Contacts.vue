@@ -135,6 +135,7 @@
                         self.contact.rechtsvertretung = '';
 
                         self.edit = false;
+                        window.location.href = '/response';
                         self.fetchContactList();
                     })
                     .catch(function (error) {

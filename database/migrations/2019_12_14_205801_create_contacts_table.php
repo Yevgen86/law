@@ -18,7 +18,7 @@ class CreateContactsTable extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email')->unique();
-            $table->bigInteger('phone')->unique();
+            $table->string('phone')->unique();
             $table->string('thema');
             $table->string('rechtsschutz');
             $table->string('rechtsvertretung');
