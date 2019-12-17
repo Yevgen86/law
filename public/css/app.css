@@ -11359,6 +11359,7 @@ a.text-dark:focus {
 * {
   box-sizing: border-box;
   font-family: "Gelasio", serif !important;
+  font-size: 62.5%;
 }
 
 h1,
@@ -11371,8 +11372,9 @@ h6 {
   font-weight: 700;
 }
 
-.navbar-nav a {
+.navbar .navbar-nav a {
   text-transform: uppercase;
+  font-size: 1.8rem;
 }
 
 .about-section {
@@ -11390,9 +11392,26 @@ h6 {
   background-attachment: scroll;
 }
 
+.about-section .person-name {
+  display: block;
+  text-indent: 0.8rem;
+  font-size: 1.5rem;
+}
+
 .about-section article {
   padding: 20px;
   max-width: 80%;
   margin: 0 auto;
+  font-size: 2.4rem;
+}
+
+.about-section h2 {
+  font-size: 2.7rem;
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .about-section .about-section article {
+    margin: 2rem auto;
+  }
 }
 

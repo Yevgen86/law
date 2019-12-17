@@ -8,9 +8,10 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="img-container">
                         <img src="{{ asset('images/antonia-berger.jpg') }}" alt="Antonia Berger" class="about-image">
+                        <span class="person-name">RA Dr. Antonia Berger</span>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <article>
                         <h2>Erfahrung, Kompetenz und persönliche Betreuung</h2>
                         <p>Das haben Sie gefunden. Mit Leidenschaft und Engagement arbeite ich als Rechtsanwältin.
@@ -58,10 +59,11 @@
 
         <section class="about-section">
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <img src="{{ asset('images/anna.jpg') }}" alt="Anna de Boar" class="about-image">
+                    <span class="person-name">Ass. Mag. Anna de Boar</span>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <article>
                         <h2>Erfahrung, Kompetenz und persönliche Betreuung</h2>
                         <p>Das haben Sie gefunden. Mit Leidenschaft und Engagement arbeite ich als Rechtsanwältin.

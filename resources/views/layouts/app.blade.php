@@ -30,7 +30,7 @@
 
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img width="50" src="{{ URL::to('/images/logo.png') }}">
+                <img width=120" src="{{ URL::to('/images/logo.png') }}">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
