@@ -1972,6 +1972,7 @@ __webpack_require__.r(__webpack_exports__);
         self.contact.rechtsschutz = '';
         self.contact.rechtsvertretung = '';
         self.edit = false;
+        window.location.href = '/response';
         self.fetchContactList();
       })["catch"](function (error) {
         console.log(error);
@@ -50077,8 +50078,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Applications/XAMPP/xamppfiles/htdocs/law19/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Applications/XAMPP/xamppfiles/htdocs/law19/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\law\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\law\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
