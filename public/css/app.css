@@ -11380,8 +11380,12 @@ h6 {
   padding: 20px;
 }
 
-.about-section .about-image {
+.about-section .img-container {
   max-width: 600px;
+}
+
+.about-section .about-image {
+  width: 100%;
   padding: 10px;
   background-attachment: scroll;
 }
