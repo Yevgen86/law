@@ -4,7 +4,7 @@
     <style>
         body {
             background-size: cover;
-            background: url("{{ asset('/images/bg-contact.jpg') }}") no-repeat fixed center;
+            background: url("{{ asset('/images/bg-contact.jpg') }}") no-repeat fixed 85% 60%;
             height: 100vh;
             width: 100%;
         }
