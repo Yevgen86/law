@@ -85,8 +85,13 @@ class ClientController extends Controller
             'city' => 'required',
             'country' => 'required',
         ]);
+        $user =  User::create([
+            'name' => $data['firstname'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
         /*dd($data);*/
-        $user = new User();
+  /*      $user = new User();
         $user->name = $request->firstname;
         $user->email = $request->email;
         $pass =  $request->password;
@@ -94,7 +99,7 @@ class ClientController extends Controller
             'rounds' => 12
         ]);
         $user->password = $hashed;
-        $user->save();
+        $user->save();*/
 
         $client = new Client();
         $client->user()->associate($user);
