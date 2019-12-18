@@ -11423,35 +11423,53 @@ h6 {
 }
 
 #leistungen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.8rem;
+  padding: 2rem;
+  /*    #leistungen:after {
+      content: "";
+      background: url('images/grey-concrete.jpg');
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: block;
+      opacity: 0.5;
+  }*/
 }
 
-#leistungen h1 {
+#leistungen .content h1 {
   font-size: 2.6rem;
   margin: 2rem;
 }
 
-#leistungen h2,
-#leistungen h3 {
+#leistungen .content h2,
+#leistungen .content h3 {
   font-size: 2.2rem;
   padding: 2rem;
 }
 
-#leistungen section {
+#leistungen .content section {
   padding: 2rem;
   margin-top: 3rem;
 }
 
-#leistungen a {
+#leistungen .content a {
   font-size: 1.8rem;
 }
 
-#leistungen p,
-#leistungen aside {
+#leistungen .content p,
+#leistungen .content aside {
   padding: 2rem 1rem;
 }
 
-#leistungen ul {
+#leistungen .content ul {
   -webkit-padding-start: 6rem;
           padding-inline-start: 6rem;
 }

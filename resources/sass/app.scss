@@ -11,9 +11,9 @@
 //_____________________start my styles_____________________\\
 
 // my variables
-$normal-font-size:1.8rem;
-$header-font-size:2.2rem;
-$white-transparent-bg: rgba(255,255,255, .8);
+$normal-font-size: 1.8rem;
+$header-font-size: 2.2rem;
+$white-transparent-bg: rgba(255, 255, 255, .8);
 
 * {
     box-sizing: border-box;
@@ -88,31 +88,57 @@ h1, h2, h3, h4, h5, h6 {
 
 //_____________________Services PAGE_____________________\\
 #leistungen {
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white-transparent-bg;
     font-size: $normal-font-size;
+    padding: 2rem;
 
-    h1 {
-        font-size: 2.6rem;
-        margin: 2rem;
-    }
-    h2,
-    h3 {
-        font-size: $header-font-size;
-        padding: 2rem;
-    }
-    section {
-        padding: 2rem;
-        margin-top: 3rem;
-    }
-    a {
-        font-size: $normal-font-size;
-    }
-    p,
-    aside {
-        padding: 2rem 1rem;
-    }
-    ul {
-        padding-inline-start: 6rem;
+    /*    #leistungen:after {
+        content: "";
+        background: url('images/grey-concrete.jpg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+        opacity: 0.5;
+    }*/
+    .content {
+
+
+
+        h1 {
+            font-size: 2.6rem;
+            margin: 2rem;
+        }
+
+        h2,
+        h3 {
+            font-size: $header-font-size;
+            padding: 2rem;
+        }
+
+        section {
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        a {
+            font-size: $normal-font-size;
+        }
+
+        p,
+        aside {
+            padding: 2rem 1rem;
+        }
+
+        ul {
+            padding-inline-start: 6rem;
+        }
     }
 }
 
@@ -123,23 +149,28 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 13rem;
         background-color: $white-transparent-bg;
     }
+
     input,
     select {
-        background-color: rgba(255,255,255, .9);
+        background-color: rgba(255, 255, 255, .9);
     }
+
     .card-header,
     label,
     input,
     button {
         font-size: $normal-font-size;
     }
+
     br {
         display: none;
     }
+
     #thema {
         font-size: 1.8rem;
         margin-top: 1rem;
     }
+
     button {
         text-transform: lowercase;
         line-height: 2.5rem;
@@ -172,8 +203,6 @@ h1, h2, h3, h4, h5, h6 {
     p {
         margin: 2rem;
     }
-
-
 
 }
 
