@@ -14,7 +14,7 @@
                         <form method="POST" action="{{ route('addClient') }}">
                             @csrf
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Vorname') }}</label>
 
                                 <div class="col-md-6">
                                     <input name="firstname"
@@ -36,7 +36,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Nachname') }}</label>
 
                                 <div class="col-md-6">
                                     <input  name="lastname"
@@ -48,7 +48,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Addresse') }}</label>
 
                                 <div class="col-md-6">
                                     <input name="email"
@@ -69,7 +69,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Passwort') }}</label>
 
                                 <div class="col-md-6">
                                     <input name="password"
@@ -88,7 +88,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Passwort bestätigen') }}</label>
 
                                 <div class="col-md-6">
                                     <input  name="password_confirmation"
@@ -101,7 +101,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="tel" class="col-md-4 col-form-label text-md-right">{{ __('Tel') }}</label>
+                                <label for="tel" class="col-md-4 col-form-label text-md-right">{{ __('Telefon') }}</label>
 
                                 <div class="col-md-6">
                                     <input  name="tel"
