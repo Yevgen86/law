@@ -84,8 +84,12 @@ class RegisterController extends Controller
             'plz' => $data['plz'],
             'city' => $data['city'],
             'country' => $data['country'],
+
         ]);
+        $user->notify(new \App\Notifications\MailNotification());
         return $user;
+
+
 
     }
 }
