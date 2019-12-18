@@ -13,7 +13,7 @@
 // my variables
 $normal-font-size: 1.8rem;
 $header-font-size: 2.2rem;
-$white-transparent-bg: rgba(255, 255, 255, .8);
+$white-transparent-bg: rgba(255, 255, 255, .9);
 
 * {
     box-sizing: border-box;
@@ -88,28 +88,9 @@ h1, h2, h3, h4, h5, h6 {
 
 //_____________________Services PAGE_____________________\\
 #leistungen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: $white-transparent-bg;
-    font-size: $normal-font-size;
+    font-size: 1.8rem;
     padding: 2rem;
-
-    /*    #leistungen:after {
-        content: "";
-        background: url('images/grey-concrete.jpg');
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: block;
-        opacity: 0.5;
-    }*/
-    .content {
-
-
 
         h1 {
             font-size: 2.6rem;
@@ -119,12 +100,13 @@ h1, h2, h3, h4, h5, h6 {
         h2,
         h3 {
             font-size: $header-font-size;
-            padding: 2rem;
+            padding: 2rem 2rem 2rem 0;
+
         }
 
         section {
             padding: 2rem;
-            margin-top: 3rem;
+            margin-top: 0;
         }
 
         a {
@@ -139,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
         ul {
             padding-inline-start: 6rem;
         }
-    }
+
 }
 
 //_____________________Contact PAGE_____________________\\

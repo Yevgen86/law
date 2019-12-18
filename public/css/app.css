@@ -11423,60 +11423,44 @@ h6 {
 }
 
 #leistungen {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   font-size: 1.8rem;
   padding: 2rem;
-  /*    #leistungen:after {
-      content: "";
-      background: url('images/grey-concrete.jpg');
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      display: block;
-      opacity: 0.5;
-  }*/
 }
 
-#leistungen .content h1 {
+#leistungen h1 {
   font-size: 2.6rem;
   margin: 2rem;
 }
 
-#leistungen .content h2,
-#leistungen .content h3 {
+#leistungen h2,
+#leistungen h3 {
   font-size: 2.2rem;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 0;
 }
 
-#leistungen .content section {
+#leistungen section {
   padding: 2rem;
-  margin-top: 3rem;
+  margin-top: 0;
 }
 
-#leistungen .content a {
+#leistungen a {
   font-size: 1.8rem;
 }
 
-#leistungen .content p,
-#leistungen .content aside {
+#leistungen p,
+#leistungen aside {
   padding: 2rem 1rem;
 }
 
-#leistungen .content ul {
+#leistungen ul {
   -webkit-padding-start: 6rem;
           padding-inline-start: 6rem;
 }
 
 #contact-form .card {
   margin-top: 13rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 #contact-form input,
@@ -11510,7 +11494,7 @@ h6 {
 }
 
 #impressum-page .impressum-card {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 2rem;
 }
 
