@@ -42,10 +42,10 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
 
-                    <a class="nav-link" href="{{ route('ueberUns') }}">{{ __('über uns') }}</a>
-                    <a class="nav-link" href="{{ route('leistungen') }}">{{ __('leistungen') }}</a>
-                    <a class="nav-link" href="{{ route('kontakt') }}">{{ __('kontakt') }}</a>
-                    <a class="nav-link" href="{{ route('impressum') }}">{{ __('impressum') }}</a>
+                    <a class="nav-link {{ Request::is('ueberUns') ? 'active' : '' }}" href="{{ route('ueberUns') }}">{{ __('über uns') }}</a>
+                    <a class="nav-link {{ Request::is('leistungen') ? 'active' : '' }}" href="{{ route('leistungen') }}">{{ __('leistungen') }}</a>
+                    <a class="nav-link {{ Request::is('kontakt') ? 'active' : '' }}" href="{{ route('kontakt') }}">{{ __('kontakt') }}</a>
+                    <a class="nav-link {{ Request::is('impressum') ? 'active' : '' }}" href="{{ route('impressum') }}">{{ __('impressum') }}</a>
 
                 </ul>
 
@@ -54,17 +54,17 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link {{ Request::is('login') ? 'active' : '' }}" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link {{ Request::is('register') ? 'active' : '' }}" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @endif
                     @else
                         @can('show-clients')
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('clients') }}">
+                                <a class="nav-link {{ Request::is('clients') ? 'active' : '' }}" href="{{ route('clients') }}">
                                     {{ __('Klienten') }}
                                 </a>
                             </li>
@@ -92,7 +92,7 @@
                         @endcan
                         @can('manage-request')
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('contacts') }}">
+                                <a class="nav-link {{ Request::is('contacts') ? 'active' : '' }}" href="{{ route('contacts') }}">
                                     {{ __('Anfragen') }}
                                 </a>
                             </li>
