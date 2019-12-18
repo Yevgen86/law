@@ -23,6 +23,7 @@ Route::view('/leistungen', 'frontend.leistungen')->name('leistungen');
 Route::view('/kontakt', 'frontend.kontakt')->name('kontakt');
 Route::view('/response', 'frontend.contactResponse')->name('response');
 Route::view('/impressum', 'frontend.impressum')->name('impressum');
+Route::get('send', 'HomeController@sendNotification');
 
 
 

@@ -58,7 +58,8 @@ class DocumentationController extends Controller
         $documentation->name = $name;
         $documentation->link = "/upload_doc/" . $doc_path;
         $documentation->save();
-
+        //notify user has new document uploaded
+        $user->notify(new \App\Notifications\DocumentNotification());
         return redirect()->back();
     }
 

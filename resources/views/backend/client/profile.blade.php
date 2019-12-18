@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="float-right">
-            <h3> {{$client->firstname ." ".$client->lastname}} Profile</h3>
+            <h3> {{$client->firstname ." ".$client->lastname}}</h3>
         </div>
         <div class="top-left mb-2">
             <a href="/single">Zurück</a>
@@ -112,7 +112,7 @@
                 <div class="form-group row mb-0">
                     <div class="col-md-6 offset-md-4">
                         <button type="submit" class="btn btn-primary">
-                            {{ __('Bearbeiten') }}
+                            {{ __('Speichern') }}
                         </button>
                     </div>
                 </div>

@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="float-right">
-            <h3> {{$client->firstname ." ".$client->lastname}} Profile</h3>
+            <h3> {{$client->firstname ." ".$client->lastname}}</h3>
         </div>
         <div class="top-left mb-2">
             <a href="/clients">Zurück</a>
@@ -24,7 +24,7 @@
                 @csrf
                 @method('PUT')
                 <div class="form-group row">
-                    <label for="name" class="col-2">{{ __('First Name') }}</label>
+                    <label for="name" class="col-2">{{ __('Vorname') }}</label>
                     <input name="firstname"
                            id="firstname"
                            type="text"
@@ -35,7 +35,7 @@
                            autofocus>
                     @error('firstname') is-invalid @enderror
 
-                    <label for="password-confirm" class="col-2">{{ __('Last Name') }}</label>
+                    <label for="password-confirm" class="col-2">{{ __('Nachname') }}</label>
                     <input  name="lastname"
                             id="lastname"
                             value="{{$client ? $client->lastname : old('lastname')}}"
@@ -112,7 +112,7 @@
                 <div class="form-group row mb-0">
                     <div class="col-md-6 offset-md-4">
                         <button type="submit" class="btn btn-primary">
-                            {{ __('Bearbeiten') }}
+                            {{ __('Speichern') }}
                         </button>
                     </div>
                 </div>
