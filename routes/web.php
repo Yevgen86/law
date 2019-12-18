@@ -30,17 +30,17 @@ Route::get('send', 'HomeController@sendNotification');
 Route::group(['middleware' => 'auth'], function () {
 
 // Lawyer == Admin Navigation routes group
-/*    Route::group(["middleware" => [
+    Route::group(["middleware" => [
 
-        'hasPermission:show-clients',
-        'hasPermission:enter-appointments',
+        'hasPermission:show-clients'
+        /*'hasPermission:enter-appointments',
         'hasPermission:list-appointments',
         'hasPermission:confirm-appointments',
         'hasPermission:manage-request',
         'hasPermission:client-update-delete',
-        'hasPermission:clients-documents',
+        'hasPermission:clients-documents',*/
 
-        ]], function () {*/
+        ]], function () {
 
         /*Route::get('lawyer', 'LawyerController@index')->name('lawyer');*/
 
@@ -56,14 +56,14 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('contacts', 'ContactRequestController@list')->name('contacts');
         Route::get('contacts/{id}/delete', 'ContactRequestController@destroy');
 
-    /*});*/
+    });
 
 
 // Client own page Navigation routes group
     Route::group(["middleware" => [
-        'hasPermission:reserve-appointment',
-        'hasPermission:cancel-appointment',
-        'hasPermission:show-my-appointment',
+        'hasPermission:reserve-appointment'
+        /*'hasPermission:cancel-appointment',
+        'hasPermission:show-my-appointment',*/
 
     ]], function () {
 
