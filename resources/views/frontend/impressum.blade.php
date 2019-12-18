@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
-
+@section('style')
+    <style>
+        body {
+            background-size: cover;
+            background: url("{{ asset('/images/icra.jpg') }}") no-repeat fixed center;
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+    @endsection
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
