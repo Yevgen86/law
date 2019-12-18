@@ -1923,6 +1923,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37494,12 +37509,12 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "form-group row mb-0" }, [
-                _c("div", { staticClass: "col-md-6 offset-md-4" }, [
+              _c("div", { staticClass: "form-group row mb-0 mt-4" }, [
+                _c("div", { staticClass: "col-12" }, [
                   _c(
                     "button",
                     {
-                      staticClass: "btn btn-primary",
+                      staticClass: "btn btn-primary btn-block",
                       on: {
                         click: function($event) {
                           $event.preventDefault()
@@ -37588,11 +37603,11 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "form-group row mb-0" }, [
-                _c("div", { staticClass: "col-md-6 offset-md-4" }, [
+                _c("div", { staticClass: "col-md-6 offset-md-4 mt-4" }, [
                   _c(
                     "button",
                     {
-                      staticClass: "btn btn-primary",
+                      staticClass: "btn btn-secondary",
                       on: {
                         click: function($event) {
                           $event.preventDefault()
@@ -37623,104 +37638,116 @@ var render = function() {
         _vm._v(" "),
         _vm.step === 3
           ? _c("div", { staticClass: "card-body" }, [
-              _c("label", [_vm._v("Haben Sie eine Rechsschutzversicherung?")]),
+              _c("div", { staticClass: "form-group row mt-4" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.contact.rechtsschutz,
+                        expression: "contact.rechtsschutz"
+                      }
+                    ],
+                    attrs: { type: "radio", id: "one", value: "ja" },
+                    domProps: {
+                      checked: _vm._q(_vm.contact.rechtsschutz, "ja")
+                    },
+                    on: {
+                      change: function($event) {
+                        return _vm.$set(_vm.contact, "rechtsschutz", "ja")
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "one" } }, [_vm._v("ja")])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.contact.rechtsschutz,
+                        expression: "contact.rechtsschutz"
+                      }
+                    ],
+                    attrs: { type: "radio", id: "two", value: "nein" },
+                    domProps: {
+                      checked: _vm._q(_vm.contact.rechtsschutz, "nein")
+                    },
+                    on: {
+                      change: function($event) {
+                        return _vm.$set(_vm.contact, "rechtsschutz", "nein")
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "two" } }, [_vm._v("nein")])
+                ])
+              ]),
               _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.contact.rechtsschutz,
-                    expression: "contact.rechtsschutz"
-                  }
-                ],
-                attrs: { type: "radio", id: "one", value: "ja" },
-                domProps: { checked: _vm._q(_vm.contact.rechtsschutz, "ja") },
-                on: {
-                  change: function($event) {
-                    return _vm.$set(_vm.contact, "rechtsschutz", "ja")
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "one" } }, [_vm._v("ja")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.contact.rechtsschutz,
-                    expression: "contact.rechtsschutz"
-                  }
-                ],
-                attrs: { type: "radio", id: "two", value: "nein" },
-                domProps: { checked: _vm._q(_vm.contact.rechtsschutz, "nein") },
-                on: {
-                  change: function($event) {
-                    return _vm.$set(_vm.contact, "rechtsschutz", "nein")
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "two" } }, [_vm._v("nein")]),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("label", [_vm._v("Haben Sie bereits einen Rechsvertreter?")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.contact.rechtsvertretung,
-                    expression: "contact.rechtsvertretung"
-                  }
-                ],
-                attrs: { type: "radio", id: "ja", value: "ja" },
-                domProps: {
-                  checked: _vm._q(_vm.contact.rechtsvertretung, "ja")
-                },
-                on: {
-                  change: function($event) {
-                    return _vm.$set(_vm.contact, "rechtsvertretung", "ja")
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "one" } }, [_vm._v("ja")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.contact.rechtsvertretung,
-                    expression: "contact.rechtsvertretung"
-                  }
-                ],
-                attrs: { type: "radio", id: "nein", value: "nein" },
-                domProps: {
-                  checked: _vm._q(_vm.contact.rechtsvertretung, "nein")
-                },
-                on: {
-                  change: function($event) {
-                    return _vm.$set(_vm.contact, "rechtsvertretung", "nein")
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "two" } }, [_vm._v("nein")]),
-              _vm._v(" "),
-              _c("br"),
+              _c("div", { staticClass: "form-group row mt-4" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.contact.rechtsvertretung,
+                        expression: "contact.rechtsvertretung"
+                      }
+                    ],
+                    attrs: { type: "radio", id: "ja", value: "ja" },
+                    domProps: {
+                      checked: _vm._q(_vm.contact.rechtsvertretung, "ja")
+                    },
+                    on: {
+                      change: function($event) {
+                        return _vm.$set(_vm.contact, "rechtsvertretung", "ja")
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "one" } }, [_vm._v("ja")])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.contact.rechtsvertretung,
+                        expression: "contact.rechtsvertretung"
+                      }
+                    ],
+                    attrs: { type: "radio", id: "nein", value: "nein" },
+                    domProps: {
+                      checked: _vm._q(_vm.contact.rechtsvertretung, "nein")
+                    },
+                    on: {
+                      change: function($event) {
+                        return _vm.$set(_vm.contact, "rechtsvertretung", "nein")
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "two" } }, [_vm._v("nein")])
+                ])
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "form-group" }, [
-                _c("div", { staticClass: "col-md-6 offset-md-4" }, [
+                _c("div", { staticClass: "col-md-6 offset-md-4 mt-4" }, [
                   _c(
                     "button",
                     {
-                      staticClass: "btn btn-primary",
+                      staticClass: "btn btn-secondary",
                       on: {
                         click: function($event) {
                           $event.preventDefault()
@@ -37758,7 +37785,24 @@ var render = function() {
     _c("br")
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-8" }, [
+      _c("label", [_vm._v("Haben Sie eine Rechsschutzversicherung?")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-8" }, [
+      _c("label", [_vm._v("Haben Sie bereits einen Rechsvertreter?")])
+    ])
+  }
+]
 render._withStripped = true
 
 

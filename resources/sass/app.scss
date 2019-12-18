@@ -12,12 +12,16 @@
 
 // my variables
 $normal-font-size:1.8rem;
-$header-font-size:2.7rem;
+$header-font-size:2.2rem;
 
 * {
     box-sizing: border-box;
     font-family: 'Gelasio', serif !important;
+}
+
+html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,7 +42,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-
 //_____________________ABOUT PAGE_____________________\\
 .about-section {
     margin: 50px auto;
@@ -51,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     .about-image {
         width: 100%;
         padding: 10px;
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
 
     .person-name {
@@ -61,10 +64,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     article {
-        padding: 20px;
+        padding: 10px;
         max-width: 80%;
         margin: 0 auto;
-        font-size: $normal-font-size + .6rem;
+        font-size: $normal-font-size;
     }
 
     h2 {
@@ -78,3 +81,66 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+
+//_____________________Services PAGE_____________________\\
+#leistungen {
+
+    font-size: $normal-font-size;
+
+    h1 {
+        font-size: 2.6rem;
+        margin: 2rem;
+    }
+    h2,
+    h3 {
+        font-size: $header-font-size;
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+        margin-top: 3rem;
+    }
+    a {
+        font-size: $normal-font-size;
+    }
+    p,
+    aside {
+        padding: 2rem 1rem;
+    }
+    ul {
+        padding-inline-start: 6rem;
+    }
+}
+
+//_____________________Contact PAGE_____________________\\
+#contact-form {
+
+    .card {
+        margin-top: 13rem;
+        background-color: rgba(255,255,255, .8);
+    }
+    input,
+    select {
+        background-color: rgba(255,255,255, .9);
+    }
+    .card-header,
+    label,
+    input,
+    button {
+        font-size: $normal-font-size;
+    }
+    br {
+        display: none;
+    }
+    #thema {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+    button {
+        text-transform: lowercase;
+        line-height: 2.5rem;
+    }
+
+}
+
+

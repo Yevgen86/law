@@ -2,8 +2,8 @@
 
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
+    <div class="container" id="leistungen">
+        <div class="row">
             <div class="col-12">
                 <h1>Leistungen</h1>
                 <section data-browse="datenschutz">
@@ -32,7 +32,7 @@
                         </li>
                     </ul>
                 </section>
-                <seaction>
+                <section>
                     <h2>Prozessvertretung</h2>
                     <ul>
                         <li><a href="#pvertretung">Vertretung</a></li>
@@ -41,7 +41,7 @@
                         <li><a href="#klagen">Klagen auf Erbauseinandersetzung</a></li>
                         <li><a href="#teilungsversteigerung">Teilungsversteigerung</a></li>
                     </ul>
-                </seaction>
+                </section>
             </div>
 
             {{--     Datenschutz       --}}
@@ -263,8 +263,8 @@
                 <article id="beratung">
                     <h3>Beratung</h3>
                     <div>
-                        Ich berate Sie gerne bei erbrechtlichen Fragestellungen, insbesondere zu folgenden
-                        Themenbereichen:
+                        <p>Ich berate Sie gerne bei erbrechtlichen Fragestellungen, insbesondere zu folgenden
+                            Themenbereichen:</p>
                         <ul>
                             <li>Abklärung erbrechtlicher Ansprüche aufgrund des Gesetzes oder letztwilliger
                                 Verfügungen

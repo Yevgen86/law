@@ -1,9 +1,19 @@
 @extends('layouts.app')
 
+@section('style')
+    <style>
+        body {
+            background-size: cover;
+            background: url("{{ asset('/images/bg-contact.jpg') }}") no-repeat fixed center;
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+@endsection
 @section('content')
-    <div class="container">
+    <div class="container" id="contact-form">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-7">
                 <div class="card">
                     <div class="card-header">
                         Hier nehmen sie mit uns Kontakt für ein Erstgespräch auf
@@ -12,9 +22,6 @@
                         <!--call vue.js -->
                         <contacts></contacts>
                     </div>
-
-
-
                 </div>
             </div>
         </div>

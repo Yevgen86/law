@@ -11359,7 +11359,11 @@ a.text-dark:focus {
 * {
   box-sizing: border-box;
   font-family: "Gelasio", serif !important;
+}
+
+html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -11389,7 +11393,7 @@ h6 {
 .about-section .about-image {
   width: 100%;
   padding: 10px;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 
 .about-section .person-name {
@@ -11399,19 +11403,84 @@ h6 {
 }
 
 .about-section article {
-  padding: 20px;
+  padding: 10px;
   max-width: 80%;
   margin: 0 auto;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
 }
 
 .about-section h2 {
-  font-size: 2.7rem;
+  font-size: 2.2rem;
 }
 
 @media all and (min-width: 576px) and (max-width: 767px) {
   .about-section .about-section article {
     margin: 2rem auto;
   }
+}
+
+#leistungen {
+  font-size: 1.8rem;
+}
+
+#leistungen h1 {
+  font-size: 2.6rem;
+  margin: 2rem;
+}
+
+#leistungen h2,
+#leistungen h3 {
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+#leistungen section {
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+#leistungen a {
+  font-size: 1.8rem;
+}
+
+#leistungen p,
+#leistungen aside {
+  padding: 2rem 1rem;
+}
+
+#leistungen ul {
+  -webkit-padding-start: 6rem;
+          padding-inline-start: 6rem;
+}
+
+#contact-form .card {
+  margin-top: 13rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#contact-form input,
+#contact-form select {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#contact-form .card-header,
+#contact-form label,
+#contact-form input,
+#contact-form button {
+  font-size: 1.8rem;
+}
+
+#contact-form br {
+  display: none;
+}
+
+#contact-form #thema {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+#contact-form button {
+  text-transform: lowercase;
+  line-height: 2.5rem;
 }
 

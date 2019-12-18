@@ -24,9 +24,9 @@
                     <input v-model="contact.phone" type="text" name="phone" class="form-control">
                 </div>
 
-                <div class="form-group row mb-0">
-                    <div class="col-md-6 offset-md-4">
-                        <button @click.prevent="next()" class="btn btn-primary">Weiter</button>
+                <div class="form-group row mb-0 mt-4">
+                    <div class="col-12">
+                        <button @click.prevent="next()" class="btn btn-primary btn-block">Weiter</button>
                     </div>
                 </div>
             </div>
@@ -46,8 +46,8 @@
                 </div>
 
                 <div class="form-group row mb-0">
-                    <div class="col-md-6 offset-md-4">
-                        <button @click.prevent="prev()" class="btn btn-primary">Zurück</button>
+                    <div class="col-md-6 offset-md-4 mt-4">
+                        <button @click.prevent="prev()" class="btn btn-secondary">Zurück</button>
                         <button @click.prevent="next()" class="btn btn-primary">Weiter</button>
                     </div>
                 </div>
@@ -55,22 +55,37 @@
             <!-- v-step closed-->
 
             <div v-if="step === 3" class="card-body">
-                <label>Haben Sie eine Rechsschutzversicherung?</label>
-                <input type="radio" id="one" value="ja" v-model="contact.rechtsschutz">
-                <label for="one">ja</label>
-                <input type="radio" id="two" value="nein" v-model="contact.rechtsschutz">
-                <label for="two">nein</label>
-                <br>
+                <div class="form-group row mt-4">
+                    <div class="col-8">
+                        <label>Haben Sie eine Rechsschutzversicherung?</label>
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" id="one" value="ja" v-model="contact.rechtsschutz">
+                        <label for="one">ja</label>
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" id="two" value="nein" v-model="contact.rechtsschutz">
+                        <label for="two">nein</label>
+                    </div>
+                </div>
 
-                <label>Haben Sie bereits einen Rechsvertreter?</label>
-                <input type="radio" id="ja" value="ja" v-model="contact.rechtsvertretung">
-                <label for="one">ja</label>
-                <input type="radio" id="nein" value="nein" v-model="contact.rechtsvertretung">
-                <label for="two">nein</label>
-                <br>
+                <div class="form-group row mt-4">
+                    <div class="col-8">
+                        <label>Haben Sie bereits einen Rechsvertreter?</label>
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" id="ja" value="ja" v-model="contact.rechtsvertretung">
+                        <label for="one">ja</label>
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" id="nein" value="nein" v-model="contact.rechtsvertretung">
+                        <label for="two">nein</label>
+                    </div>
+                </div>
+
                 <div class="form-group">
-                    <div class="col-md-6 offset-md-4">
-                <button @click.prevent="prev()" class="btn btn-primary">Zurück</button>
+                    <div class="col-md-6 offset-md-4 mt-4">
+                    <button @click.prevent="prev()" class="btn btn-secondary">Zurück</button>
                     <button v-show="!edit" type="submit" class="btn btn-success">Anfrage senden</button>
                 </div>
                 </div>
