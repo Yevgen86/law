@@ -8,7 +8,7 @@
         }
         main.py-4 {
             background-size: cover;
-            background: url(http://localhost:8000/images/grey-concrete.jpg) no-repeat fixed 50% 40%;
+            background: url("{{ asset('/images/grey-concrete.jpg') }}") no-repeat fixed 50% 40%;
             padding-top: 0!important;
             padding-bottom: 0!important;
             max-width: 100%;

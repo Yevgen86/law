@@ -3,11 +3,16 @@
 @section('style')
     <style>
         body {
-            background-size: cover;
-            background: url("{{ asset('/images/icra.jpg') }}") no-repeat fixed center;
             height: 100vh;
             width: 100%;
-            margin: 0 auto;
+        }
+        main.py-4 {
+            background-size: cover;
+            background: url("{{ asset('/images/icra.jpg') }}") no-repeat fixed 40% 62%;
+            padding-top: 0!important;
+            padding-bottom: 0!important;
+            max-width: 100%;
+            height: auto;
         }
     </style>
 @endsection
