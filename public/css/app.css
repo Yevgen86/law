@@ -11361,9 +11361,11 @@ a.text-dark:focus {
   font-family: "Gelasio", serif !important;
 }
 
-html {
+html,
+body {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 h1,
@@ -11392,6 +11394,7 @@ h6 {
 
 .about-section .about-image {
   width: 100%;
+  height: auto;
   padding: 10px;
   background-attachment: fixed;
 }
@@ -11482,5 +11485,31 @@ h6 {
 #contact-form button {
   text-transform: lowercase;
   line-height: 2.5rem;
+}
+
+#impressum-page {
+  font-size: 1.8rem;
+}
+
+#impressum-page .impressum-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+}
+
+#impressum-page h1 {
+  font-size: 2.6rem;
+  margin: 4rem 2rem;
+  padding: 1rem 0;
+}
+
+#impressum-page ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  padding: 2rem;
+}
+
+#impressum-page p {
+  margin: 2rem;
 }
 

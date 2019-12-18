@@ -90,29 +90,19 @@ class ClientController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-        /*dd($data);*/
-  /*      $user = new User();
-        $user->name = $request->firstname;
-        $user->email = $request->email;
-        $pass =  $request->password;
-        $hashed = Hash::make('pass', [
-            'rounds' => 12
+        //add default role for the new user
+        $user->addRole("client");
+        $user->client()->create([
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
+            'email' => $data['email'],
+            'tel' => $data['tel'],
+            'address' => $data['address'],
+            'plz' => $data['plz'],
+            'city' => $data['city'],
+            'country' => $data['country'],
         ]);
-        $user->password = $hashed;
-        $user->save();*/
-
-        $client = new Client();
-        $client->user()->associate($user);
-        $client->firstname = $request->firstname;
-        $client->lastname = $request->lastname;
-        $client->email = $request->email;
-        $client->tel = $request->tel;
-        $client->address = $request->address;
-        $client->plz = $request->plz;
-        $client->city = $request->city;
-        $client->country = $request->country;
-        $client->save();
-
+        /*$user->notify(new \App\Notifications\MailNotification());*/
         return redirect('/clients');
     }
 
