@@ -3,8 +3,7 @@
 @section('style')
     <style>
         body {
-            background-size: cover;
-            background: url("{{ asset('/images/activity-board.jpg') }}") no-repeat fixed center;
+            background: url("{{ asset('/images/activity-board.jpg') }}") no-repeat fixed center/100%;
             height: 100vh;
             width: 100%;
         }

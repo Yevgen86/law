@@ -11515,3 +11515,25 @@ h6 {
   margin: 2rem;
 }
 
+#contact-response .card {
+  -webkit-transform: translate(0%, 100%);
+          transform: translate(0%, 100%);
+}
+
+#contact-response .card-header {
+  font-size: 2.2rem;
+  background-color: #2fa360;
+}
+
+#contact-response .card-header h2 {
+  margin: 0;
+}
+
+#contact-response .card-body {
+  font-size: 1.8rem;
+}
+
+#contact-response .card-body p:nth-child(2) {
+  text-align: right;
+}
+

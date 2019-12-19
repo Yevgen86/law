@@ -2,18 +2,24 @@
 
 
 @section('content')
-    <div class="container">
+    <div class="container" id="contact-response">
         <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div>
-                    <div><h3>Vielen Dank für ihre Anfrage!</h3></div>
+            <div class="col-7">
+                <div class="card ">
+                    <div class="card-header">
+                        <h2>Vielen Dank für ihre Anfrage!</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Eine Antwort folgt binnen zwei Werktagen.
+                        </p>
+                        <p>
+                            <a href="/">zur Hauptseite</a>
+                        </p>
+                    </div>
                 </div>
-
-                Eine Antwort folgt binnen zwei Werktagen.<br>
-
             </div>
-
-    </div>
+        </div>
     </div>
 @endsection
 

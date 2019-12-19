@@ -188,3 +188,29 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+//_____________________contactResponse PAGE_____________________\\
+
+#contact-response {
+
+    .card {
+        transform: translate(0%, 100%);
+    }
+    .card-header {
+        font-size: $header-font-size;
+        background-color: #2fa360;
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .card-body {
+        font-size: 1.8rem;
+
+        p:nth-child(2) {
+            text-align: right;
+        }
+    }
+
+
+}

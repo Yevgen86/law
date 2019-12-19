@@ -7,8 +7,7 @@
             width: 100%;
         }
         main.py-4 {
-            background-size: cover;
-            background: url("{{ asset('/images/grey-concrete.jpg') }}") no-repeat fixed 50% 40%;
+            background: url("{{ asset('/images/grey-concrete.jpg') }}") no-repeat fixed center/100%;
             padding-top: 0!important;
             padding-bottom: 0!important;
             max-width: 100%;
