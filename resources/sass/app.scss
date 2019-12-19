@@ -211,6 +211,107 @@ h1, h2, h3, h4, h5, h6 {
             text-align: right;
         }
     }
-
-
 }
+
+//_____________________single backend PAGE_____________________\\
+
+#single-page {
+
+    h1 {
+        text-align: center;
+        font-size: $header-font-size;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .card {
+        margin-top: 2rem;
+        position: relative;
+
+        .card-img-top {
+            height: 400px;
+        }
+
+        .card-title {
+            font-size: $normal-font-size;
+        }
+        .card-text {
+            height: 40px;
+            font-size: $normal-font-size;
+        }
+
+        a {
+            display: block;
+            text-transform: uppercase;
+            max-width: 30%;
+            line-height: 3rem;
+        }
+    }
+}
+
+//_____________________clients admin PAGE_____________________\\
+
+#clients-page,
+#requests-page,
+#newClient {
+
+    font-size: $normal-font-size;
+
+    h1 {
+        font-size: $header-font-size;
+        text-align: center;
+        margin: 1rem auto;
+    }
+
+    input#search,
+    a.btn {
+        font-size: $normal-font-size;
+    }
+
+    .table {
+        background-color: $white-transparent-bg;
+        text-align: center;
+    }
+
+    .search-btn-container {
+        justify-content: flex-end;
+    }
+
+    .pagination-container {
+
+        text-align: center;
+        width: 100%;
+
+        nav {
+            display: inline-block;
+        }
+    }
+}
+
+#change-client-page,
+#newClient,
+#login-form,
+#docs {
+
+    font-size: $normal-font-size;
+
+    h3 {
+        text-align: center;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+    input,
+    label,
+    .btn {
+        font-size: $normal-font-size;
+    }
+    .mybg {
+        margin-top: 3rem;
+    }
+    .table {
+        text-align: center;
+    }
+}
+
+
+

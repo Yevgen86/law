@@ -50,7 +50,6 @@
                             und
                             möchte das bestmögliche Ergebnis für Sie erreichen. Gerne vertreibe ich mit Ihnen Ihre
                             Rechtssorgen.</p>
-                        <p>Ihre Rechtsanwältin Antonia Berger</p>
                     </article>
                 </div>
             </div>

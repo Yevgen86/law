@@ -11537,3 +11537,130 @@ h6 {
   text-align: right;
 }
 
+#single-page h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+#single-page .card {
+  margin-top: 2rem;
+  position: relative;
+}
+
+#single-page .card .card-img-top {
+  height: 400px;
+}
+
+#single-page .card .card-title {
+  font-size: 1.8rem;
+}
+
+#single-page .card .card-text {
+  height: 40px;
+  font-size: 1.8rem;
+}
+
+#single-page .card a {
+  display: block;
+  text-transform: uppercase;
+  max-width: 30%;
+  line-height: 3rem;
+}
+
+#clients-page,
+#requests-page,
+#newClient {
+  font-size: 1.8rem;
+}
+
+#clients-page h1,
+#requests-page h1,
+#newClient h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+#clients-page input#search,
+#clients-page a.btn,
+#requests-page input#search,
+#requests-page a.btn,
+#newClient input#search,
+#newClient a.btn {
+  font-size: 1.8rem;
+}
+
+#clients-page .table,
+#requests-page .table,
+#newClient .table {
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+#clients-page .search-btn-container,
+#requests-page .search-btn-container,
+#newClient .search-btn-container {
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+}
+
+#clients-page .pagination-container,
+#requests-page .pagination-container,
+#newClient .pagination-container {
+  text-align: center;
+  width: 100%;
+}
+
+#clients-page .pagination-container nav,
+#requests-page .pagination-container nav,
+#newClient .pagination-container nav {
+  display: inline-block;
+}
+
+#change-client-page,
+#newClient,
+#login-form,
+#docs {
+  font-size: 1.8rem;
+}
+
+#change-client-page h3,
+#newClient h3,
+#login-form h3,
+#docs h3 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+#change-client-page input,
+#change-client-page label,
+#change-client-page .btn,
+#newClient input,
+#newClient label,
+#newClient .btn,
+#login-form input,
+#login-form label,
+#login-form .btn,
+#docs input,
+#docs label,
+#docs .btn {
+  font-size: 1.8rem;
+}
+
+#change-client-page .mybg,
+#newClient .mybg,
+#login-form .mybg,
+#docs .mybg {
+  margin-top: 3rem;
+}
+
+#change-client-page .table,
+#newClient .table,
+#login-form .table,
+#docs .table {
+  text-align: center;
+}
+
